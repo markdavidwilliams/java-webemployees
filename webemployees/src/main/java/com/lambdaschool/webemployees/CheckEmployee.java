@@ -1,6 +1,5 @@
 package com.lambdaschool.webemployees;
 
-public interface CheckEmployee
-{
+public interface CheckEmployee {
     boolean test(Employee e);
 }

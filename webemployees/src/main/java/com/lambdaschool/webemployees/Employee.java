@@ -2,8 +2,7 @@ package com.lambdaschool.webemployees;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-public class Employee
-{
+public class Employee {
     private static final AtomicLong counter = new AtomicLong();
     private long id;
     private String fname;
@@ -13,8 +12,7 @@ public class Employee
     private int companyID;
     private int healthPlanID;
 
-    public Employee(String fname, String lname, double salary, boolean has401k, int companyID, int healthPlanID)
-    {
+    public Employee(String fname, String lname, double salary, boolean has401k, int companyID, int healthPlanID) {
         this.id = counter.incrementAndGet();
         this.fname = fname;
         this.lname = lname;
@@ -24,8 +22,7 @@ public class Employee
         this.healthPlanID = healthPlanID;
     }
 
-    public Employee (Employee toClone)
-    {
+    public Employee(Employee toClone) {
         this.id = toClone.getId();
         this.fname = toClone.getFname();
         this.lname = toClone.getLname();
@@ -35,73 +32,59 @@ public class Employee
         this.healthPlanID = toClone.getHealthPlanID();
     }
 
-    public long getId()
-    {
+    public long getId() {
         return id;
     }
 
-    public String getFname()
-    {
+    public String getFname() {
         return fname;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return fname + " " + lname;
     }
 
-    public void setFname(String fname)
-    {
+    public void setFname(String fname) {
         this.fname = fname;
     }
 
-    public String getLname()
-    {
+    public String getLname() {
         return lname;
     }
 
-    public void setLname(String lname)
-    {
+    public void setLname(String lname) {
         this.lname = lname;
     }
 
-    public double getSalary()
-    {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary)
-    {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    public boolean isHas401k()
-    {
+    public boolean isHas401k() {
         return has401k;
     }
 
-    public void setHas401k(boolean has401k)
-    {
+    public void setHas401k(boolean has401k) {
         this.has401k = has401k;
     }
 
-    public int getCompanyID()
-    {
+    public int getCompanyID() {
         return companyID;
     }
 
-    public void setCompanyID(int companyID)
-    {
+    public void setCompanyID(int companyID) {
         this.companyID = companyID;
     }
 
-    public int getHealthPlanID()
-    {
+    public int getHealthPlanID() {
         return healthPlanID;
     }
 
-    public void setHealthPlanID(int healthPlanID)
-    {
+    public void setHealthPlanID(int healthPlanID) {
         this.healthPlanID = healthPlanID;
     }
 }

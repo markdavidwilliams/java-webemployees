@@ -8,11 +8,12 @@ public class WebemployeesApplication
 {
 
     static EmpList ourEmpList;
+    static CountryList ourCountryList;
     public static void main(String[] args)
     {
         ourEmpList = new EmpList();
+        ourCountryList = new CountryList();
         SpringApplication.run(WebemployeesApplication.class, args);
     }
 
 }
-

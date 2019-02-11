@@ -10,18 +10,15 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/data")
-public class EmployeeController
-{
+public class EmployeeController {
     @RequestMapping("/employee")
-    public Employee getEmployeeDetail(@RequestParam(value="id") long id)
-    {
-        return WebemployeesApplication.ourEmpList.findEmployee(e-> (e.getId() == id));
+    public Employee getEmployeeDetail(@RequestParam(value = "id") long id) {
+        return WebemployeesApplication.ourEmpList.findEmployee(e -> (e.getId() == id));
     }
 
 
     @RequestMapping("/allemployees")
-    public ArrayList<Employee> getAllEmployees()
-    {
+    public ArrayList<Employee> getAllEmployees() {
         WebemployeesApplication.ourEmpList.empList.sort((e1, e2) ->
                 e1.getName().compareToIgnoreCase(e2.getName()));
         return WebemployeesApplication.ourEmpList.empList;
